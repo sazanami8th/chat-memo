@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+body{
+    font-size: 100%;
+    font-family: "Arial", "メイリオ", sans-serif;
+    background-color: rgb(16, 16, 26);;
+}
+li{
+    list-style: none;
+}
+main{
+    margin: 50px auto 0 auto;
+    max-width: 770px;
+}
+
+/* headerの設定 */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    background-color: rgb(64, 64, 72);
+}
+#header > .system_title{
+    margin: 0;
+}
+#header h1{
+    padding-left: 0;
+}
+#header h1 img{
+    vertical-align: middle;
+}
+
+/* ローカルナビの設定 */
+#local_navi{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 100vh;
+    margin: 0;
+    position: fixed;
+    background-color: rgb(16, 16, 26);
+}
+#local_navi ul{
+    padding: 0;
+}
+#local_navi button{
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-color: rgb(16, 16, 26);
+    border: none;
+}
+#local_navi button:hover{
+    background-color: rgb(16, 16, 26);
+}
+#local_navi button img{
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+}
+#local_navi button img:hover{
+    opacity: 1;
+}
+#local_navi .side_panel{
+    margin: 0;
+}
+#local_navi .side_panel:last-of-type{
+    /* 準備中 */
+    display: none;
+    margin-top: auto;
+}
+#local_navi > input{
+    display: none;
+}
+
+/* タイムラインの設定 */
+#time_line_frame{
+    height: auto;
+    min-height: calc(100dvh - 50px - 3rem);
+    width: 100%;
+    max-width: 720px;
+    margin: 0 0 3rem 50px;
+    box-sizing: border-box;
+    border-left: 1px solid rgb(150, 150, 150);
+    border-right: 1px solid rgb(150, 150, 150);
+}
+#time_line_frame > .post{
+    padding: 0.5rem;
+    border-top: 1px solid rgb(150, 150, 150);
+    background-color: rgb(16, 16, 26);
+}
+#time_line_frame > .post:last-child{
+    border-bottom: 1px solid rgb(150, 150, 150);
+}
+#time_line_frame .user_name{
+    display: inline;
+    margin: 0;
+    font-size: 110%;
+    color: rgb(255, 255, 255);
+}
+#time_line_frame .time_stamp{
+    margin: 0 0 0 1rem;
+    font-size: 80%;
+    color: rgb(255, 255, 255);
+}
+#time_line_frame .message{
+    white-space: pre-wrap;
+    margin: 0.1rem 0 0 0;
+    color: rgb(255, 255, 255);
+}
+
+/* 投稿フォームの設定 */
+#post_form_container{
+    display: flex;
+    width: 100%;
+    max-width: 720px;
+    min-height: 3rem;
+    position: fixed;
+    margin-left: 50px;
+    bottom: 0;
+    box-sizing: border-box;
+    border-left: 1px solid rgb(150, 150, 150);
+    border-right: 1px solid rgb(150, 150, 150);
+}
+#post_form_container > .user_icon{
+    width: 30px;
+    height: 30px;
+    margin: auto 0.5rem 0.7rem 1rem;
+    padding: 0;
+}
+#post_form_container > .user_icon button{
+    width: 30px;
+    height: 30px;
+    border: 0;
+    padding: 0;
+    background-color: rgb(80, 80, 85);
+}
+#post_form_container > .user_icon img{
+    width: 30px;
+    height: 30px;
+}
+#post_form_container > .user_icon img:hover{
+    opacity: 0.5;
+}
+#post_form_container > .text_area{
+    position: relative;
+    width: calc(100% - 5rem - 30px);
+    margin: 1rem 0 1rem 0;
+}
+#post_form_container > .text_area textarea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+#post_form_container .dummy_text_area{
+    min-height: 1.5rem;
+    white-space: pre-wrap;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+#post_form_container > .button_container{
+    width: 4rem;
+    margin: auto 0 0.75rem 1rem;
+}
+#post_form_container > .button_container button{
+    box-sizing: border-box;
+}
