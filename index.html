@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT-MEMO</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <header id="header">
+        <h1 class="system_title">
+            <a href="index.html"><img src="img/logo.png" alt="CHAT-MEMO"></a>
+        </h1>
+    </header>
+
+    <main>
+        <div id="local_navi">
+            <ul class="side_panel">
+                <li>
+                    <button type="button" id="home_button">
+                        <img src="img/home.png" alt="ホーム">
+                    </button>
+                </li>
+                <li>
+                    <button type="button" id="open_button">
+                        <img src="img/open.png" alt="開く">
+                    </button>
+                </li>
+                <li>
+                    <button type="button" id="save_button">
+                        <img src="img/save.png" alt="保存">
+                    </button>
+                </li>
+            </ul>
+            <ul class="side_panel">
+                <li>
+                    <button type="button" id="user_button">
+                        <img src="img/user.png" alt="ユーザー">
+                    </button>
+                </li>
+                <li>
+                    <button type="button" id="config_button">
+                        <img src="img/gear.png" alt="設定">
+                    </button>
+                </li>
+            </ul>
+            <input type="file" id="open_form" accept=".txt">
+        </div>
+
+        <div id="time_line_frame"></div>
+
+        <div id="post_form_container">
+            <span class="user_icon">
+                <button type="button" id="user_icon_button">
+                    <img src="img/user.png" alt="ユーザー">
+                </button>
+            </span>
+            <span class="text_area">
+                <div class="dummy_text_area"></div>
+                <textarea id="post_content" placeholder="ここに文章を入力"></textarea>
+            </span>
+            <span class="button_container">
+                <button type="button" id="post_send_button">投稿</button>
+            </span>
+        </div>
+    </main>
+
+    <script src="js/code.js" type="text/javascript"></script>
+</body>
+</html>
