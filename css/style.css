@@ -18,7 +18,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100vw;
+    width: 100dvw;
     height: 50px;
     position: fixed;
     top: 0;
@@ -41,7 +41,7 @@ main{
     display: flex;
     flex-direction: column;
     width: 50px;
-    height: 100vh;
+    height: 100dvh;
     margin: 0;
     position: fixed;
     background-color: rgb(16, 16, 26);
@@ -176,4 +176,42 @@ main{
 }
 #post_form_container > .button_container button{
     box-sizing: border-box;
+}
+
+/* smartphone_view */
+@media screen and (max-width: 770px){
+    main{
+        max-width: 720px;
+    }
+    
+    #local_navi{
+        flex-direction: row;
+        width: 100dvw;
+        height: 50px;
+        top: 50px;
+    }
+    
+    #local_navi ul{
+        font-size: 0;
+    }
+
+    #local_navi li{
+        display: inline;
+    }
+
+    #local_navi button{
+        display: inline;
+    }
+
+    #time_line_frame{
+        width: 100%;
+        min-height: calc(100dvh - 100px - 3rem);
+        margin-top: 100px;
+        margin-left: 0;
+    }
+
+    #post_form_container{
+        width: calc(100% - 1rem);
+        margin-left: 0;
+    }
 }
